@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef72ce35-83ec-4020-9358-50f93ffd3863">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM `alicuota`]]>
+	</queryString>
+	<field name="Cedula" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NCasa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ValorPago" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<staticText>
+				<reportElement x="141" y="79" width="259" height="31" uuid="4936b9f4-17b6-4423-83f2-b81ac69363c7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Franklin Gothic Demi" size="24"/>
+				</textElement>
+				<text><![CDATA[Reporte de alicuotas ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="117" height="88" uuid="282073c7-1488-409b-ab0f-d0ffb57ef476"/>
+				<imageExpression><![CDATA["D:\\ESPE\\METODOLOGIA\\imagenes_reportes\\GH.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="187" y="12" width="175" height="76" uuid="62590b11-9516-462b-ac90-870c436879dd"/>
+				<imageExpression><![CDATA["D:\\ESPE\\METODOLOGIA\\imagenes_reportes\\logo_conjunto.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="463" y="12" width="140" height="68" uuid="346cb1b8-54c4-4449-b20e-0f3e5082ee0b"/>
+				<imageExpression><![CDATA["D:\\ESPE\\METODOLOGIA\\imagenes_reportes\\logo_espe.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="413" y="0" width="143" height="21" uuid="a29d0bc3-ed7e-4655-9fc7-d87547e39b6d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="0" width="78" height="20" uuid="969cef9e-ca0e-45ef-b723-9a16dadcb5c2"/>
+				<textElement>
+					<font fontName="Franklin Gothic Book" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cedula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="0" width="76" height="20" uuid="24d59f3e-0576-4861-bf6f-4bf82e3457c3"/>
+				<textElement>
+					<font fontName="Franklin Gothic Book" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="0" width="221" height="20" uuid="5a7000a6-ed7a-47db-8776-7409d38249ee"/>
+				<textElement>
+					<font fontName="Franklin Gothic Book" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+			<line>
+				<reportElement x="17" y="12" width="396" height="1" uuid="4e80cbfe-ca5e-4495-b312-dd9b53159ecb"/>
+			</line>
+			<staticText>
+				<reportElement x="188" y="0" width="72" height="20" uuid="c32c7dbd-5429-4d8d-8593-96d7e982544a"/>
+				<textElement>
+					<font fontName="Franklin Gothic Book" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[#Casa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="0" width="94" height="20" uuid="74eb4f34-9b23-44d1-a104-259ff82674f4"/>
+				<textElement>
+					<font fontName="Franklin Gothic Book" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="16" y="3" width="78" height="20" uuid="af0ab95c-dbbb-40ec-825d-fcceff8a8281"/>
+				<textFieldExpression><![CDATA[$F{Cedula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="3" width="94" height="20" uuid="2e57682e-2035-4d90-adde-13a7211d9401"/>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="3" width="71" height="20" uuid="d3e77511-40c1-4193-8851-a57abc270a54"/>
+				<textFieldExpression><![CDATA[$F{NCasa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="3" width="76" height="20" uuid="ba8665ef-9a44-4037-aeaa-f670142f608c"/>
+				<textFieldExpression><![CDATA[$F{ValorPago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="335" y="3" width="221" height="20" uuid="124ff213-28be-4dca-a189-681b4ee0818a"/>
+				<textFieldExpression><![CDATA[$F{Descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="19" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="11" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
